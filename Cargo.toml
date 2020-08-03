@@ -1,16 +1,22 @@
 [package]
-name = "ssvm_nodejs_starter"
+name = "tak_puzzles"
 version = "0.1.0"
-authors = ["ubuntu"]
+authors = ["noah@fields.name"]
 edition = "2018"
 
 [package.metadata.ssvmup.profile.release]
 wasm-opt = ['-O4']
 
 [lib]
-name = "ssvm_nodejs_starter_lib"
+name = "tak_puzzles_lib"
 path = "src/lib.rs"
 crate-type =["cdylib"]
 
 [dependencies]
 wasm-bindgen = "=0.2.61"
+wasm-bindgen-futures = "0.4.11"
+dotenv = "0.15.0"
+serde = {version = "1.0.105", features = ["derive"] }
+serde_json = "1.0.50"
+reqwest = "0.10.7"
+atom_syndication = { version = "0.9", features = ["with-serde"] }
